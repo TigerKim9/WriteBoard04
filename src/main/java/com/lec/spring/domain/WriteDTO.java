@@ -12,7 +12,7 @@ public class WriteDTO {
 	private String content;  // wr_content
 	private String name;  // wr_name
 	private int viewCnt;  // wr_viewcnt
-	private LocalDateTime regDate;  // wr_regdate
+	private LocalDateTime regdate;  // wr_regdate
 
 	// 웹개발시...
 	// 가능한, 다음 3가지는 이름을 일치시켜주는게 좋습니다.
@@ -24,14 +24,14 @@ public class WriteDTO {
 	}
 
 
-	public WriteDTO(int uid, String subject, String content, String name, int viewCnt, LocalDateTime regDate) {
+	public WriteDTO(int uid, String subject, String content, String name, int viewCnt, LocalDateTime regdate) {
 		super();
 		this.uid = uid;
 		this.subject = subject;
 		this.content = content;
 		this.name = name;
 		this.viewCnt = viewCnt;
-		this.regDate = regDate;
+		this.regdate = regdate;
 //		System.out.println("WriteDTO(...) 객체 생성");
 	}
 
@@ -86,18 +86,18 @@ public class WriteDTO {
 	}
 
 
-	public LocalDateTime getRegDate() {
-		return regDate;
+	public LocalDateTime getRegdate() {
+		return regdate;
 	}
 
 
-	public void setRegDate(LocalDateTime regDate) {
-		this.regDate = regDate;
+	public void setRegdate(LocalDateTime regdate) {
+		this.regdate = regdate;
 	}
 	
 	public String getRegDateTime() {
-		if(this.regDate == null) return "";
-		return this.regDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss"));
+		if(this.regdate == null) return "";
+		return this.regdate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss"));
 	}
 	
 	
@@ -106,7 +106,7 @@ public class WriteDTO {
 	@Override
 	public String toString() {
 		return String.format("WriteDTO] %d : %s : %s : %s : %d : %s", 
-				uid, subject, content, name, viewCnt, regDate);
+				uid, subject, content, name, viewCnt, regdate);
 	}
 	
 
